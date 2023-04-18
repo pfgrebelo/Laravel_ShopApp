@@ -1,30 +1,12 @@
 <script setup>
-import { ref } from 'vue';
-import { Head, router } from '@inertiajs/vue3';
+import { Head } from '@inertiajs/vue3';
 import Nav from '../Components/Nav.vue';
-import ApplicationMark from '@/Components/ApplicationMark.vue';
-import Dropdown from '@/Components/Dropdown.vue';
-import DropdownLink from '@/Components/DropdownLink.vue';
-import NavLink from '@/Components/NavLink.vue';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink.vue';
+import Footer from '../Components/Footer.vue';
 
 defineProps({
     title: String,
 });
 
-const showingNavigationDropdown = ref(false);
-
-const switchToTeam = (team) => {
-    router.put(route('current-team.update'), {
-        team_id: team.id,
-    }, {
-        preserveState: false,
-    });
-};
-
-const logout = () => {
-    router.post(route('logout'));
-};
 </script>
 
 <template>
@@ -34,8 +16,6 @@ const logout = () => {
 
         <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             <Nav />
-
-            
 
             <!-- Page Heading -->
             <header class="bg-gray-700 dark:bg-gray-800 shadow">
@@ -50,13 +30,7 @@ const logout = () => {
             <main>
                 <slot />
             </main>
-            <footer class="text-center text-white bg-gray-700 px-4 py-4">
-                <div>
-                    <p>
-                        Lorem ipsum dolor, sit amet.
-                    </p>
-                </div>
-            </footer>
+            <Footer />
         </div>
     </div>
 </template>
