@@ -41,7 +41,7 @@ const logout = () => {
                                         Login
                                         </Link>
                                     </template>
-                                    <Link href="#" class="hover:text-yellow-500 transition">
+                                    <Link :href="route('shop.index')" class="hover:text-yellow-500 transition">
                                     Shop
                                     </Link>
                                     <form method="post" @submit.prevent="logout" v-if="$page.props.user">

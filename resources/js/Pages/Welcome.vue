@@ -21,7 +21,8 @@ defineProps({
             <div class="flex flex-col justify-around items-center absolute inset-0">
                 <span class="text-white text-xl">Lorem ipsum dolor sit amet.</span>
                 <div class="flex flex-col space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
-                    <GrayButton v-for="(category, index) in categories" :key="index" as="href" href="#" class="text-md">
+                    <GrayButton v-for="(category, index) in categories" :key="index" as="href" 
+                    :href="route('shop.index', { category: category.slug })" class="text-md">
                         {{ category.name }}
                     </GrayButton>
                 </div>
