@@ -21,7 +21,7 @@ const logout = () => {
                             <!-- Logo -->
                             <div class="shrink-0 flex items-center">
                                 <Link :href="route('welcome')">
-                                <ApplicationMark class="block h-9 w-auto" />
+                                <ApplicationMark class="font-logo block w-auto hover:text-yellow-500 transition" />
                                 </Link>
                             </div>
 
