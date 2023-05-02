@@ -1,22 +1,26 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
 import AppLayout from '@/Layouts/AppLayout.vue';
+import Icon from '@/Components/Icons.vue';
 
 defineProps({
     products: Object,
     categories: Object,
+    categoryName: Object,
 });
 </script>
 
 <template>
-    <AppLayout>
+    <AppLayout :title="`Shop ${categoryName}`">
         <header class="text-gray-700 bg-gray-300 shadow">
             <div class="flex justify-between items-center max-w-7x1 mx-auto py-2 px-4 sm:px-6 lg:px-8">
                 <div class="flex items-center leading-tight">
                     <Link :href="route('welcome')" class="text-gray-700 transition hover:text-yellow-500">Home</Link>
+                    <Icon name="angle-right" class="w-4 h-4 fill-current"></Icon>
+                    <span>Shop {{ categoryName }}</span>
                 </div>
                 <div class="w-1/2">
-
+                    search
                 </div>
             </div>
         </header>

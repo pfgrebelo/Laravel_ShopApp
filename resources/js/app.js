@@ -14,12 +14,13 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 /* import specific icons */
 import { faUserSecret } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import Icons from './Components/Icons.vue';
 
 const appName = window.document.getElementsByTagName('title')[0]?.innerText || 'Laravel';
 
 /* add icons to the library */
-library.add(faUserSecret, faShoppingCart)
+library.add(faUserSecret, faShoppingCart, faAngleRight)
 
 createInertiaApp({
     title: (title) => `${title} - ${appName}`,

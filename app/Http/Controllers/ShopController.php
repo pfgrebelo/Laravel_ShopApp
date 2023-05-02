@@ -14,23 +14,21 @@ class ShopController extends Controller
      */
     public function index()
     {
-        /* $categories = Category::all();
+        $categories = Category::all();
         if (request()->category) {
             $products = Product::whereHas('categories', function ($query) {
                 $query->where('slug', request()->category);
             })->inRandomOrder()->get();
-        } */
-
-        $categories = Category::all();
-        $products = request()->category
-            ? Product::whereHas('categories', function ($query) {
-                $query->where('slug', request()->category);
-            })->inRandomOrder()->get()
-            : Product::inRandomOrder()->get();
+            $categoryName = $categories->where('slug', request()->category)->first()->name;
+        } else {
+            $products = Product::inRandomOrder()->get();
+            $categoryName = "All";
+        }
 
         return Inertia::render('Shop/Index', [
             'products' => $products,
             'categories' => $categories,
+            'categoryName' => $categoryName,
         ]);
     }
 
