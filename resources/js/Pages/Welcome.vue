@@ -1,7 +1,7 @@
 <script setup>
 import { Head, Link } from '@inertiajs/vue3';
-import AppLayout from '../Layouts/AppLayout.vue'
-import GrayButton from '../Components/Buttons/GrayButton.vue';
+import AppLayout from '@/Layouts/AppLayout.vue';
+import GrayButton from '@/Components/Buttons/GrayButton.vue';
 
 defineProps({
     canLogin: Boolean,
