@@ -41,7 +41,7 @@ defineProps({
             <Link href="#" class="flex flex-col w-full h-full mb-4">
                 <div class="text-center text-white bg-gray-700 py-2">
                     <span>
-                        fdsgfsbs
+                        Category
                     </span>
                 </div>
                 <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
@@ -49,7 +49,7 @@ defineProps({
             <Link href="#" class="flex flex-col w-full h-full mb-4">
                 <div class="text-center text-white bg-gray-700 py-2">
                     <span>
-                        fdsgfsbs
+                        Category
                     </span>
                 </div>
                 <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
@@ -57,7 +57,7 @@ defineProps({
             <Link href="#" class="flex flex-col w-full h-full mb-4">
                 <div class="text-center text-white bg-gray-700 py-2">
                     <span>
-                        fdsgfsbs
+                        Category
                     </span>
                 </div>
                 <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
@@ -65,7 +65,7 @@ defineProps({
             <Link href="#" class="flex flex-col w-full h-full mb-4">
                 <div class="text-center text-white bg-gray-700 py-2">
                     <span>
-                        fdsgfsbs
+                        Category
                     </span>
                 </div>
                 <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
