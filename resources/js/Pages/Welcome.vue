@@ -8,7 +8,7 @@ defineProps({
     canRegister: Boolean,
     laravelVersion: String,
     phpVersion: String,
-    products: Object,
+    featured: Object,
     categories: Object,
 });
 </script>
@@ -31,37 +31,13 @@ defineProps({
             <p>Lorem ipsum dolor sit amet.</p>
         </div>
         <div class="flex flex-col max-w-7xl mx-auto px-4 sm:container sm:flex-row sm:space-x-4 sm:my-4 sm:px-6 lg:px-8">
-            <Link href="#" class="flex flex-col w-full h-full mb-4">
+            <Link v-for="(feat, index) in featured" :key="index" href="#" class="flex flex-col w-full h-full mb-4">
             <div class="text-center text-white bg-gray-700 py-2">
                 <span>
-                    Category
+                    {{ feat.name }}
                 </span>
             </div>
-            <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
-            </Link>
-            <Link href="#" class="flex flex-col w-full h-full mb-4">
-            <div class="text-center text-white bg-gray-700 py-2">
-                <span>
-                    Category
-                </span>
-            </div>
-            <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
-            </Link>
-            <Link href="#" class="flex flex-col w-full h-full mb-4">
-            <div class="text-center text-white bg-gray-700 py-2">
-                <span>
-                    Category
-                </span>
-            </div>
-            <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
-            </Link>
-            <Link href="#" class="flex flex-col w-full h-full mb-4">
-            <div class="text-center text-white bg-gray-700 py-2">
-                <span>
-                    Category
-                </span>
-            </div>
-            <img :src="'/storage/images/default/no_image.png'" alt="#" class="h-72 object-cover md:w-72 lg:w-96">
+            <img :src="'/storage/images/' + feat.image" :alt="feat.name" class="h-72 object-cover md:w-72 lg:w-96">
             </Link>
         </div>
         <div class="text-center text-white bg-black px-4 py-4">
@@ -75,6 +51,7 @@ defineProps({
                 aperiam qui excepturi! Natus, praesentium repellat esse optio fugiat id vel voluptatum deserunt minus,
                 provident cum doloribus.
             </p>
-    </div>
-</app-layout></template>
+        </div>
+    </app-layout>
+</template>
 
