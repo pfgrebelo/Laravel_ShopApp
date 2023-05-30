@@ -32,6 +32,7 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome');
 */
 
 Route::get('/shop', [ShopController::class, 'index'])->name('shop.index');
+Route::get('/shop/{product:slug}', [ShopController::class, 'show'])->name('shop.show');
 
 Route::middleware([
     'auth:sanctum',

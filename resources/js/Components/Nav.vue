@@ -103,7 +103,7 @@ const logout = () => {
                         </div>
                     </template>
                     <div class="pt-2 pb-3 space-y-1">
-                        <ResponsiveNavLink href="#">
+                        <ResponsiveNavLink :href="route('shop.index')">
                             Shop
                         </ResponsiveNavLink>
                     </div>

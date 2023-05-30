@@ -13,7 +13,7 @@ import Icon from './Icons.vue';
                     <slot name="breadcrumbs"></slot>
                 </div>
                 <div class="w-1/2">
-                    search
+                    <slot name="search"></slot>
                 </div>
             </div>
         </header>

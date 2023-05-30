@@ -4,6 +4,7 @@
     <font-awesome-icon v-if="name === 'cart'"  icon="fa-solid fa-shopping-cart" />
     <font-awesome-icon v-if="name === 'user-secret'"  icon="fa-solid fa-user-secret" />
     <font-awesome-icon v-if="name === 'angle-right'"  icon="fa-solid fa-angle-right" />
+    <font-awesome-icon v-if="name === 'angle-left'"  icon="fa-solid fa-angle-left" />
 </template>
 
 <script>
