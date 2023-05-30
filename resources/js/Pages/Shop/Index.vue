@@ -41,7 +41,7 @@ defineProps({
                         class="h-72 object-cover md:w-72 lg:w-96">
                     <div class="flex justify-around bg-gray-700 py-2">
                         <span class="text-yellow-500">
-                            {{ product.price }}
+                            {{ $filters.formatCurrency(product.price) }}
                         </span>
                         <span class="text-white">
                             {{ product.name }}

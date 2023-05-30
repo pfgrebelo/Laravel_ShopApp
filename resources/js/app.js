@@ -26,7 +26,14 @@ createInertiaApp({
     title: (title) => `${title} - ${appName}`,
     resolve: (name) => resolvePageComponent(`./Pages/${name}.vue`, import.meta.glob('./Pages/**/*.vue')),
     setup({ el, App, props, plugin }) {
-        return createApp({ render: () => h(App, props) })
+        const VueApp = createApp({ render: () => h(App, props) })
+        VueApp.config.globalProperties.$filters = {
+            formatCurrency(value) {
+                value = (value/100)
+                return value.toLocaleString("pt-PT", {style:"currency", currency:"EUR"})
+            }
+        }
+        VueApp
             .use(plugin)
             .use(ZiggyVue, Ziggy)
             .component('icon', Icons)
